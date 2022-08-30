@@ -23,6 +23,8 @@ jobs:
       run: gem install rails
     - name: Generate new Rails project
       run: rails new ${{ github.event.repository.name }} --minimal --api d=postgresql
+    - name: Git Commit/Push Changes
+      uses: actions-x/commit@v1
   debug:
     name: Debug Contexts
     runs-on: ubuntu-latest
