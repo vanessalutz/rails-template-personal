@@ -24,15 +24,7 @@ jobs:
     - name: Generate new Rails project
       run: rails new ${{ github.event.repository.name }} --minimal --api d=postgresql
     - name: push
-      uses: github-actions-x/commit@v2.9
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        push-branch: 'master'
-        commit-message: 'publish'
-        force-add: 'true'
-        files: a.txt b.txt c.txt dirA/ dirB/ dirC/a.txt
-        name: Vanessa Lutz
-        email: vanessa.lutz@hingehealth.com 
+      uses: GuillaumeFalourd/git-commit-push@v1.3
   debug:
     name: Debug Contexts
     runs-on: ubuntu-latest
