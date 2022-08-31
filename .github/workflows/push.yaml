@@ -30,7 +30,7 @@ jobs:
         rails new ${{ github.event.repository.name }} --minimal --api d=postgresql
         ls -la
         rm -rf .git
-        cd /${{ github.event.repository.name }}
+        cd ..
         git add .
         git commit -m "initialize repo"
         git push
