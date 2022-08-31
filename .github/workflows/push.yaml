@@ -30,7 +30,7 @@ jobs:
         rails new ${{ github.event.repository.name }} --minimal --api d=postgresql
         git add .
         git commit -m "initialize new repo"
-        git push origin main
+        git push origin master
   debug:
     name: Debug Contexts
     runs-on: ubuntu-latest
