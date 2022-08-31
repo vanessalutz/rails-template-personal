@@ -14,9 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      with:
-        ref: $
+    - name: Checkout repo 
+      uses: actions/checkout@v2
     - name: Ruby Install
       uses: ruby/setup-ruby@v1
       with:
@@ -27,10 +26,10 @@ jobs:
       run: rails new ${{ github.event.repository.name }} --minimal --api d=postgresql
     - name: Bundle Install
       run: bundle install
-    - name: push
-      uses: stefanzweifel/git-auto-commit-action@v4
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
       with:
-        commit_message: Auto initialize new repo
+        default_author: github_actions
   debug:
     name: Debug Contexts
     runs-on: ubuntu-latest
