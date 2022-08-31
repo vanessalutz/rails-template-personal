@@ -28,6 +28,9 @@ jobs:
     - name: Generate new Rails project
       run: |
         rails new ${{ github.event.repository.name }} --minimal --api d=postgresql
+        ls -la
+        rm -rf .git
+        cd /${{ github.event.repository.name }}
         git add .
-        git commit -m "initialize new repo"
-        git push origin master
+        git commit -m "initialize repo"
+        git push
