@@ -1,6 +1,6 @@
 name: Init Rails Microservice
 
-on: create
+on: [create]
   # workflow_dispatch:
   #   inputs:
   #     repo_tag:
@@ -16,7 +16,7 @@ jobs:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       with:
-        ref: ${{ github.head_ref }}
+        ref: $
     - name: Ruby Install
       uses: ruby/setup-ruby@v1
       with:
@@ -25,6 +25,8 @@ jobs:
       run: gem install rails
     - name: Generate new Rails project
       run: rails new ${{ github.event.repository.name }} --minimal --api d=postgresql
+    - name: Bundle Install
+      run: bundle install
     - name: push
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
