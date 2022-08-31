@@ -64,7 +64,7 @@ jobs:
     - name: Generate project
       run: |
         gem install rails
-        rails new ${{ github.event.repository.name }} --minimal --api d=postgresql
+        rails new ${{ github.event.repository.name }} --minimal --api --skip-git d=postgresql
     
     - name: Git Commit Push Action
       uses: GuillaumeFalourd/git-commit-push@v1.3
