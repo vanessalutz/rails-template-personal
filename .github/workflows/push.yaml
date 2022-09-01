@@ -67,7 +67,7 @@ jobs:
         rails new . --minimal --api -T --skip-git d=postgresql
     - name: Install Rspec
       run: |
-        bundler add rspec-rails --group test
+        bundler add rspec-rails --group development --group test
         rails generate rspec:install
 
     
