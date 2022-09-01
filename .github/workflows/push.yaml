@@ -69,7 +69,13 @@ jobs:
       run: |
         bundler add rspec-rails --group test
         rails generate rspec:install
-
+    - name: Install Rubocop
+      run: |
+        bundler add rubocop --group test
+        bundler add rubocop-performance --group test
+        bundler add rubocop-rails --group test
+        bundle exec rubocop -a
+        bundle exec rubocop --auto-gen-config
     
     - name: Git Commit Push Action
       uses: GuillaumeFalourd/git-commit-push@v1.3
