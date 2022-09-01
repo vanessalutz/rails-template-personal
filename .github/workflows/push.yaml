@@ -72,8 +72,8 @@ jobs:
     - name: Install Rubocop
       run: |
         bundler add rubocop --group test
-        bundle exec rubocop -a
         bundle exec rubocop --auto-gen-config
+        bundle exec rubocop -a
         bundler add rubocop-rails --group test
 
     
