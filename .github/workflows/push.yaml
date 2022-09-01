@@ -67,8 +67,7 @@ jobs:
         rails new . --minimal --api -T --skip-git d=postgresql
     - name: Install Rspec
       run: |
-        sed -i '22 i gem "rspec-rails",' Gemfile
-        bundle install
+        bundle install rspec-rails
         rails generate rspec:install
 
     
