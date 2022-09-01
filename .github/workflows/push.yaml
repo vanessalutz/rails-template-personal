@@ -65,6 +65,8 @@ jobs:
       run: |
         gem install rails
         rails new . --minimal --api -T --skip-git d=postgresql
+    - name: Install Rspec
+      run: rspect --init
     
     - name: Git Commit Push Action
       uses: GuillaumeFalourd/git-commit-push@v1.3
