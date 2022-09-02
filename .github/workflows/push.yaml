@@ -60,6 +60,9 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true
+        
+    - name: Create Gemset
+      run: rvm gemset create ${{ github.event.repository.name }}
     
     - name: Generate project
       run: |
