@@ -61,8 +61,8 @@ jobs:
       with:
         bundler-cache: true
         
-    - name: Create Gemset
-      run: rvm gemset create ${{ github.event.repository.name }}
+#     - name: Create Gemset
+#       run: rvm gemset create ${{ github.event.repository.name }}
     
     - name: Generate project
       run: |
