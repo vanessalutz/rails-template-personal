@@ -60,9 +60,6 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true
-        
-#     - name: Create Gemset
-#       run: rvm gemset create ${{ github.event.repository.name }}
     
     - name: Generate project
       run: |
@@ -75,10 +72,11 @@ jobs:
     - name: Install Rubocop
       run: |
         bundler add rubocop --group test
+        bundler add rubocop-rails --group test
+        bundler add rubocop-performance --group test
+        bundler add rubocop-rspec --group test
         bundle exec rubocop --auto-gen-config
         bundle exec rubocop -a
-        bundler add rubocop-rails --group test
-
     
     - name: Git Commit Push Action
       uses: GuillaumeFalourd/git-commit-push@v1.3
