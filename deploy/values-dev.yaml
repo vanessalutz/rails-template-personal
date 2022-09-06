@@ -5,7 +5,3 @@ clusterName: 'foobar'
 envVars:
   DD_TRACE_AGENT_HOSTNAME: datadog-scaling.foobar.dev
 domain: foobar.dev
-ingress:
-  external:
-    hosts:
-      - YOUR_REPO_NAME.foorbar.dev
