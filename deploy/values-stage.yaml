@@ -3,7 +3,3 @@ awsAccountId: 'foobar'
 environment: stage
 clusterName: 'foobar'
 domain: foobar.io
-ingress:
-  external:
-    hosts:
-      - YOUR_REPO_NAME.foobar.io
