@@ -1,9 +1,9 @@
 services:
   db:
     environment:
-      POSTGRES_PASSWORD: #{YOUR_REPO_NAME}_password
-      POSTGRES_USER: #{YOUR_REPO_NAME}_dev
-      POSTGRES_DB: #{YOUR_REPO_NAME}_db
+      POSTGRES_PASSWORD: YOUR_REPO_NAME_password
+      POSTGRES_USER: YOUR_REPO_NAME_dev
+      POSTGRES_DB: YOUR_REPO_NAME_db
     image: postgres:14
     ports:
       - '5432:5432'
