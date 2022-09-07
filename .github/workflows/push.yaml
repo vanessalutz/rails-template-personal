@@ -65,6 +65,10 @@ jobs:
       run: |
         gem install rails
         rails new . --minimal --api -T --skip-git d=postgresql
+    - name: Install Sentry
+      run: |
+        gem install sentry-ruby
+        gem install sentry-rails
     - name: Install Rspec
       run: |
         bundler add rspec-rails --group test
@@ -77,6 +81,5 @@ jobs:
         bundler add rubocop-rspec --group test
         bundle exec rubocop --auto-gen-config
         bundle exec rubocop -a
-    
     - name: Git Commit Push Action
       uses: GuillaumeFalourd/git-commit-push@v1.3
