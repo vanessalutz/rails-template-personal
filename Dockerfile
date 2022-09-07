@@ -14,9 +14,6 @@ RUN mkdir $HOME/.ssh
 
 COPY Gemfile /app/
 COPY Gemfile.lock /app/
-COPY start.sh /app/
-COPY retrieve-secrets.sh /app/
-RUN chmod +x /app/start.sh /app/retrieve-secrets.sh
 WORKDIR /app/
 RUN gem install bundler -v '2.3.8'
 
