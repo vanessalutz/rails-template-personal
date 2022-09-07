@@ -68,8 +68,8 @@ jobs:
         rails new . --minimal --api -T --skip-git d=postgresql
     - name: Install Sentry
       run: |
-        gem install sentry-ruby
-        gem install sentry-rails
+        bundler add sentry-ruby
+        bundler add sentry-rails
     - name: Install Rspec
       run: |
         bundler add rspec-rails --group test
