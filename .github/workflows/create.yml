@@ -37,7 +37,8 @@
 name: Init Project
 
 on: 
-  create
+ create:
+ workflow_dispatch:
 
 permissions: write-all
 
