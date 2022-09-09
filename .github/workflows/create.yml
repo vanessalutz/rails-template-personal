@@ -58,7 +58,7 @@ jobs:
       with:
        fetch-depth: 0
        submodules: recursive
- #      token: ${{ secrets.WORKFLOW_TOKEN }}
+       token: ${{ secrets.WORKFLOW_TOKEN }}
 
     - name: Ruby Install
       uses: ruby/setup-ruby@v1
