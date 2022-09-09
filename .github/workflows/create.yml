@@ -92,7 +92,7 @@ jobs:
     - name: Move GHA workflows
       run: |
         mv -f ${GITHUB_WORKSPACE}/tmp/ ${GITHUB_WORKSPACE}/.github/workflows
-        mv -f ${GITHUB_WORKSPACE}/.github/workflows/tmp/* ${GITHUB_WORKSPACE}/.github/workflows
-        rmdir ${GITHUB_WORKSPACE}/.github/workflows/tmp/
+#        mv -f ${GITHUB_WORKSPACE}/.github/workflows/tmp/* ${GITHUB_WORKSPACE}/.github/workflows
+#       rmdir ${GITHUB_WORKSPACE}/.github/workflows/tmp/
     - name: Git Commit Push Action
       uses: GuillaumeFalourd/git-commit-push@v1.3
