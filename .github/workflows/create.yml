@@ -91,7 +91,7 @@ jobs:
       run: find ${GITHUB_WORKSPACE}/.github/workflows/ -iname "create.yml" -maxdepth 1 -type f -delete 
     - name: Move GHA workflows
       run: |
-        mv ${GITHUB_WORKSPACE}/tmp ${GITHUB_WORKSPACE}/.github/workflows
+        cp -a ${GITHUB_WORKSPACE}/tmp/. ${GITHUB_WORKSPACE}/.github/workflows/
 #        mv -f ${GITHUB_WORKSPACE}/.github/workflows/tmp/* ${GITHUB_WORKSPACE}/.github/workflows
 #       rmdir ${GITHUB_WORKSPACE}/.github/workflows/tmp/
     - name: Git Commit Push Action
